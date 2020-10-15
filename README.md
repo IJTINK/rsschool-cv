@@ -1,2 +1,2 @@
 # rsschool-cv
-My first repository
+https://IJTINK.github.io/rsschool-cv/cv
