@@ -1,7 +1,7 @@
  # _**Raman Yanouski**_
  ## _**Contacts:**_
  * Phone Number: +375292890516
- * linkedin.com/in/raman-yanouski-572a111b6/
+ * [LinkedIn](https://www.linkedin.com/in/raman-yanouski-572a111b6/)
 
  ## _**Summary:**_ 
  
