@@ -10,7 +10,7 @@ Hi. Let me introduce myself. I'm Roma. For the last 3 years I worked as a crimin
 ## _**Skills:**_
 1. HTML;
 1. CSS;
-1. JS;
+1. JavaScript;
 1. VSCode;
 1. Figma.
 
