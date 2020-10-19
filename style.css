@@ -1,5 +1,86 @@
 body {
-  background-color: #00ffff;
+  background-color:white;
   max-width: 1024px;
   margin: 0 auto;
+  padding: 100px;
+}
+
+#resume {
+  max-height: 1440px;
+  background-color: #a8fdfd;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 75px;
+}
+
+#photo {
+  width: 300px;
+  height: 300px;
+}
+
+.flex-item-header {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-part-of-header {
+  margin: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.right-part-of-header {
+  margin: 1px;
+}
+
+.flex-item-main {
+  margin: 10px 0 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around
+}
+
+.flex-item-h1-fullName {
+  font-size: 60px;
+  margin: auto;
+}
+
+.flex-item-p-objective {
+  font-size: 35px;
+  background-color: rgb(106, 225, 233);
+  margin: auto;
+}
+
+.contacts {
+  font-size: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.summary {
+  font-size: 30px;
+  f
+}
+
+.skills {
+  font-size: 30px;
+}
+
+.education {
+  font-size: 30px;
+  width: 400px;
+}
+
+.language {
+  font-size: 30px;
+}
+
+.flex-item-footer {
+  margin: 10px 0 10px 0;
+  font-size: 30px;
+  text-align: center;
 }
