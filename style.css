@@ -18,36 +18,36 @@ body {
   height: 300px;
 }
 
-.flex-item-header {
+.header {
   margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
 }
 
-.left-part-of-header {
+.nameAndObjective {
   margin: 1px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
-.right-part-of-header {
+.photo {
   margin: 1px;
 }
 
-.flex-item-main {
+.main {
   margin: 10px 0 10px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.flex-item-h1-fullName {
+.fullName {
   font-size: 60px;
   margin: auto;
 }
 
-.flex-item-p-objective {
+.objective {
   font-size: 35px;
   background-color: rgb(106, 225, 233);
   margin: auto;
@@ -81,7 +81,7 @@ body {
   text-align: justify;
 }
 
-.flex-item-footer {
+.footer {
   margin: 10px 0 0 0;
   font-size: 30px;
   text-align: center;
@@ -92,13 +92,13 @@ body {
     width: 200px;
     height: 200px;
   }
-  
-  .flex-item-h1-fullName {
+
+  .fullName {
     color: black;
     font-size: 40px;
   }
 
-  .flex-item-p-objective {
+  .objective {
     font-size: 30px;
     background-color: rgb(106, 225, 233);
     margin: auto;
@@ -112,8 +112,8 @@ body {
     justify-content: space-around;
     text-decoration: none;
   }
- 
-  .flex-item-main {
+
+  .main {
     margin: 10px 0 10px 0;
     display: flex;
     justify-content: space-between;
@@ -123,40 +123,40 @@ body {
     font-size: 20px;
     text-align: justify;
   }
-  
+
   .skills {
     font-size: 20px;
   }
-  
+
   .education {
     font-size: 20px;
     width: 400px;
   }
-  
+
   .language {
     font-size: 20px;
     text-align: justify;
   }
-  
-  .flex-item-footer {
+
+  .footer {
     margin: 10px 0 0 0;
     font-size: 20px;
     text-align: center;
   }
 }
 
-@media (min-width:455px) and (max-width: 772px) {
+@media (min-width: 455px) and (max-width: 772px) {
   #photo {
     width: 150px;
     height: 150px;
   }
-  
-  .flex-item-h1-fullName {
-    color:black;
+
+  .fullName {
+    color: black;
     font-size: 23px;
   }
 
-  .flex-item-p-objective {
+  .objective {
     font-size: 15px;
     background-color: rgb(106, 225, 233);
     margin: auto;
@@ -170,8 +170,8 @@ body {
     justify-content: space-around;
     text-decoration: none;
   }
- 
-  .flex-item-main {
+
+  .main {
     margin: 10px 0 10px 0;
     display: flex;
     justify-content: space-between;
@@ -181,41 +181,41 @@ body {
     font-size: 15px;
     text-align: justify;
   }
-  
+
   .skills {
     font-size: 15px;
   }
-  
+
   .education {
     font-size: 15px;
     width: 300px;
     text-align: justify;
   }
-  
+
   .language {
     font-size: 15px;
     text-align: justify;
   }
-  
-  .flex-item-footer {
+
+  .footer {
     margin: 10px 0 0 0;
     font-size: 15px;
     text-align: center;
   }
 }
 
-@media (min-width:220px) and (max-width: 454px) {
+@media (min-width: 220px) and (max-width: 454px) {
   #photo {
     width: 100px;
     height: 100px;
   }
-  
-  .flex-item-h1-fullName {
-    color:black;
+
+  .fullName {
+    color: black;
     font-size: 17px;
   }
 
-  .flex-item-p-objective {
+  .objective {
     font-size: 13px;
     background-color: rgb(106, 225, 233);
     margin: auto;
@@ -229,8 +229,8 @@ body {
     justify-content: space-around;
     text-decoration: none;
   }
- 
-  .flex-item-main {
+
+  .main {
     margin: 10px 0 10px 0;
     display: flex;
     justify-content: space-between;
@@ -240,26 +240,24 @@ body {
     font-size: 13px;
     text-align: justify;
   }
-  
+
   .skills {
     font-size: 13px;
   }
-  
+
   .education {
     font-size: 13px;
-    width: 100px;
+    width: 200px;
   }
-  
+
   .language {
     font-size: 13px;
     text-align: justify;
   }
-  
-  .flex-item-footer {
+
+  .footer {
     margin: 10px 0 0 0;
     font-size: 13px;
     text-align: center;
   }
 }
-
- 
