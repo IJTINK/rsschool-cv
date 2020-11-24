@@ -13,14 +13,14 @@
     <div class="calculator_wrapper">
 
         <div class="display">
-        <input class="result" value= "0">
+        <input  disabled type="text" id="display" class="result" value= "0">
         </div>
 
     <div class="button_field">
         <div class="left_field">
-            <button type="button" class="cleanEntry left_field_button">CE</button>
-            <button type="button" class="clean left_field_button">C</button>
-            <button type="button" class="division left_field_button">/</button>
+            <button type="button" class="cleanEntry clearButton left_field_button" id="ce">CE</button>
+            <button type="button" class="clean clearButton left_field_button" id="c">C</button>
+            <button type="button" class="division operation left_field_button">/</button>
         
 
             <button type="button" class="number left_field_button">7</button>
@@ -39,20 +39,22 @@
         
 
             <button type="button" class="number left_field_button wide_button">0</button>
-            <button type="button" class="point left_field_button">.</button>
+            <button type="button" class="point left_field_button" id="decimal">.</button>
         </div>
 
         <div class="right_field">
-            <button type="button" class="multiplication right_field_button">*</button>
-            <button type="button" class="subtraction right_field_button">-</button>
-            <button type="button" class="addition right_field_button">+</button>
-            <button type="button" class="equal right_field_button high_button">=</button>
+            <button type="button" class="multiplication operation right_field_button">*</button>
+            <button type="button" class="subtraction operation right_field_button">-</button>
+            <button type="button" class="addition operation right_field_button">+</button>
+            <button type="button" class="equal operation right_field_button high_button" id="equal">=</button>
         </div>
     </div>    
 
 
 </div>
 </main>
+
+<script src="main.js"></script>
 
 </body>
 </html>
