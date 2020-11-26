@@ -50,7 +50,7 @@ function operation(oper){
 let localOperationMemory =  display.value;
 
 if (MemoryNewNumber && MemoryPendingOperation !== '=' ){
-    display.value = memoryCurrentNumber;
+    display.value = MemoryCurrentNumber;
 } else{
         MemoryNewNumber = true;
         if (MemoryPendingOperation === '+'){
@@ -73,10 +73,10 @@ function decimal(){
 
     if (MemoryNewNumber){
         localDecimalMemory = '0.';
-        MemoryNewNumber =false;
-    } else{
-        if (localDecimalMemory.indexOf('.') === -1){
-        localDecimalMemory = '.';
+        MemoryNewNumber = false;
+    } else {
+        if (localDecimalMemory.indexOf('.') === -1) {
+        localDecimalMemory += '.';
         }
      };
 
