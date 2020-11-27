@@ -1,0 +1,53 @@
+.swiper-wrapper {
+  display: flex;
+  max-width: 1020px;
+  height:600px;
+  position: relative;
+  overflow: hidden;
+  
+    background-color: $active-menu-color;
+
+
+
+
+
+
+  .left-arrow{
+    position: absolute;
+    top: 50%;
+    left: 4%;
+  }
+
+  #left-arrow:hover {
+    cursor: pointer;
+ width: 130%;
+ height: 130%;
+  }
+
+  #right-arrow:hover {
+    cursor: pointer;
+ width: 130%;
+ height: 130%;
+  }
+
+  .right-arrow{
+    position: absolute;
+    top: 50%;
+    right: 4%;
+  }
+
+
+ 
+  .swiper-slide {
+    display: flex;
+    max-width: 1020px;
+    margin: 0 auto;
+    img {
+      min-width: 100%;
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+
+}
+

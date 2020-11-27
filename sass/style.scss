@@ -1,0 +1,17 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+}
+
+
+
+@import "header";
+@import "slider";
+@import "services";
+@import "portfolio";
+@import "footer";
