@@ -74,20 +74,6 @@ let result = () => {
     default:
       break;
   }
-
-  //   if (currentActiveOperation === OPERATIONS.PLUS) {
-  //     let result = Number(memoryNumber1) + Number(display.value);
-  //     display.value = result;
-  //     currentActiveOperation = OPERATIONS.NONE;
-  //   } else if (currentActiveOperation === OPERATIONS.MINUS) {
-  //     let result = Number(memoryNumber1) - Number(display.value);
-  //     display.value = result;
-  //     currentActiveOperation = OPERATIONS.NONE;
-  //   } else if (currentActiveOperation === OPERATIONS.MULTIPLICATION) {
-  //     let result = Number(memoryNumber1) * Number(display.value);
-  //     display.value = result;
-  //     currentActiveOperation = OPERATIONS.NONE;
-  //   }
 };
 
 equal.addEventListener("click", result);
