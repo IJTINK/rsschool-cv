@@ -1,53 +1,47 @@
-.swiper-wrapper {
+#wrapper_slider{
+  background-color: #F06C64;
+}
+
+.slider_content {
   display: flex;
   max-width: 1020px;
-  height:600px;
   position: relative;
   overflow: hidden;
-  
-    background-color: $active-menu-color;
-
-
-
-
-
-
-  .left-arrow{
-    position: absolute;
-    top: 50%;
-    left: 4%;
-  }
-
-  #left-arrow:hover {
-    cursor: pointer;
- width: 130%;
- height: 130%;
-  }
-
-  #right-arrow:hover {
-    cursor: pointer;
- width: 130%;
- height: 130%;
-  }
-
-  .right-arrow{
-    position: absolute;
-    top: 50%;
-    right: 4%;
-  }
-
-
- 
-  .swiper-slide {
-    display: flex;
-    max-width: 1020px;
-    margin: 0 auto;
-    img {
-      min-width: 100%;
-      object-fit: cover;
-      height: 100%;
-    }
-  }
+  margin: 0 auto;
 
 }
 
+.left_arrow {
+  position: absolute;
+  top: 50%;
+  left: 4%;
+}
+
+.right_arrow {
+  position: absolute;
+  top: 50%;
+  right: 4%;
+}
+
+#left_arrow:hover {
+  cursor: pointer;
+  width: 2%;
+  border-radius: 50%;
+  box-shadow: 0 0 0 black; 
+  cursor: pointer;
+}
+#right_arrow:hover {
+  cursor: pointer;
+  width: 2%;
+}
+
+#red_slide{
+  max-width: 100%;
+}
+
+
+@media (min-width: 768px) and (max-width:1019px){
+   
+
+
+    }

@@ -3,6 +3,7 @@
 #wrapper-services{
   background-color:#f2f2f2;
   width: 100%;
+  border-bottom: 6px solid #FFFFFF;
 }
 
 
@@ -14,7 +15,7 @@
     flex-direction: column;
     max-width: 1020px;
     background-color: #f2f2f2;
-    border-bottom: 6px solid #ffffff;
+    
 
     }
   
@@ -110,13 +111,23 @@
   }
   
   
-/*
-  @media (min-width: 768px) and (max-width:1020px){
+
+  @media (min-width: 768px) and (max-width:1019px){
   .wrapper_services{
-    padding: 41px 41px 0 42px;
+    padding: 41px 41px 30px 42px;
   }
   .services-list{
   margin: 0 15px 0 0;
   }
+  }
+
+
+
+
+
+
+
+
+@media (min-width: 375px) and (max-width:767px){
+
 }
-*/

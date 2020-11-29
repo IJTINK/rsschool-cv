@@ -19,11 +19,9 @@
     font-weight: 900;
     font-size: 13px;
     line-height: 18px;
-  
-    display: flex;
+    
     align-items: center;
     color: #666d89;
-  
     display: flex;
     justify-content: space-between;
     align-content: center;
@@ -54,4 +52,16 @@
     .footer {
       width: 100%;
     }
+  }
+
+
+  @media (min-width: 375px) and (max-width:767px){
+ 
+    .copyright{
+      display: none;
+    }
+.footer{
+    display: flex;
+    justify-content: center;}
+
   }
