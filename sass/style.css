@@ -334,12 +334,18 @@ div.services-description p {
   line-height: 12px;
   text-align: center;
   color: #767e9e;
+  cursor: pointer;
 }
 
-.portfolio-item:hover {
+.portfolio_button_active {
   border-color: #DEDEDE;
   cursor: pointer;
   color: #DEDEDE;
+}
+
+.portfolio-image:hover {
+  cursor: pointer;
+  box-shadow: 0 0 30px white;
 }
 
 .portfolio-switcher {
@@ -377,6 +383,10 @@ div.services-description p {
     width: calc(100% - 20px);
   }
 }
+.order {
+  order: -1;
+}
+
 .wrapper-footer {
   width: 100%;
   background-color: #2D303A;

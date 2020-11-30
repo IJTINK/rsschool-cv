@@ -60,13 +60,24 @@
     line-height: 12px;
     text-align: center;
     color:#767e9e;
+    cursor: pointer;
   
   }
   
-.portfolio-item:hover{
+
+
+.portfolio_button_active{
   border-color: #DEDEDE;
   cursor: pointer;
   color: #DEDEDE;
+}
+
+
+
+
+.portfolio-image:hover{
+  cursor: pointer;
+  box-shadow: 0 0 30px white; 
 }
 
   .portfolio-switcher {
@@ -76,6 +87,9 @@
   .portfolio-list {
     padding: 0;
   }
+
+
+
 
  @media (min-width: 768px) and (max-width:1019px){
     
@@ -111,4 +125,8 @@
   .portfolio-image{
     width: calc(100% - 20px);
   }
+}
+
+.order {
+  order: -1;
 }
