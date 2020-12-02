@@ -8,48 +8,69 @@ body {
   font-style: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  margin: 0;
+}
+
 #wrapper_header {
   background-color: #2D303A;
-  width: 100%;
   border-bottom: 6px solid #323746;
 }
 
 .header {
   margin: 0 auto;
-  width: 100%;
-  height: 95px;
-  background-color: #2D303A;
+  height: 89px;
   text-transform: uppercase;
   font-size: 12px;
   max-width: 1020px;
-  height: 89px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.burger_button {
+.burger_button, .burger_menu, .burger_navigation {
   display: none;
 }
 
-.burger_menu {
-  display: none;
-  transition: all 2s;
-}
-
-.burger_navigation {
-  display: none;
-  transition: all 2s;
+.logo {
+  margin-left: 40px;
 }
 
 .header_logo_text {
+  margin: 0;
+  display: inline-block;
+  vertical-align: top;
   font-size: 25px;
   color: white;
-  width: 124px;
-  height: 25px;
-  margin: 29px 0 35px 40px;
 }
 
 .header_logo_symbol {
+  font-size: 25px;
+  color: #f06c64;
+}
+
+.header_logo_text_burger {
+  margin: 0;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 25px;
+  color: white;
+}
+
+.header_logo_symbol_burger {
+  font-size: 25px;
   color: #f06c64;
 }
 
@@ -58,7 +79,7 @@ body {
   list-style: none;
   display: flex;
   justify-content: flex-end;
-  margin: 42px 40px 33px 0px;
+  margin: 48px 40px 33px 0px;
   font-weight: bold;
   font-size: 12px;
   line-height: 14px;
@@ -96,9 +117,10 @@ li a:hover {
     width: 100%;
   }
 }
-@media (min-width: 375px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .header {
     justify-content: center;
+    height: 71px;
   }
 
   .navigation {
@@ -108,8 +130,8 @@ li a:hover {
   .burger_button {
     z-index: 10;
     position: absolute;
-    top: 42px;
-    left: 40px;
+    top: 28px;
+    left: 20px;
     bottom: 25px;
     display: block;
     width: 27px;
@@ -124,26 +146,62 @@ li a:hover {
     border-radius: 4px;
   }
 
-  .burger_menu_active {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    z-index: 5;
-    position: absolute;
+  .burger_menu {
+    display: block;
+    position: fixed;
     top: 0;
     left: 0;
-    background-color: #2D303A;
+    bottom: 0;
+    background-color: #2d303a;
     width: 75%;
-    height: 100%;
-    transition: all 2s;
+    z-index: 5;
+    transform: translateX(-100%);
+    visibility: hidden;
+    transition: 1s ease;
+    -webkit-transition: 1s ease;
+    -moz-transition: 1s ease;
+    -ms-transition: 1s ease;
+    -o-transition: 1s ease;
+  }
+
+  .burger_menu_active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0;
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
   }
 
   .logo_burger_menu {
-    margin-bottom: 10px;
+    margin-top: 25px;
   }
 
   .header_logo_text {
-    font-size: 24px;
+    margin: 0;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 25px;
+    color: white;
+  }
+
+  .header_logo_symbol {
+    font-size: 25px;
+    color: #f06c64;
+  }
+
+  .header_logo_text_burger {
+    margin: 0;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 25px;
+    color: white;
+  }
+
+  .header_logo_symbol_burger {
+    font-size: 25px;
+    color: #f06c64;
   }
 
   .burger_navigation {
@@ -153,6 +211,7 @@ li a:hover {
   .header_list_burger_on {
     list-style-type: none;
     margin-top: 184px;
+    padding: 0;
   }
 
   .header_list_item::after {
@@ -176,14 +235,13 @@ li a:hover {
 }
 
 #wrapper_slider {
-  background-color: #F06C64;
+  background-color: yellow;
 }
 
 .slider_content {
   display: flex;
   max-width: 1020px;
   position: relative;
-  overflow: hidden;
   margin: 0 auto;
 }
 
@@ -191,12 +249,14 @@ li a:hover {
   position: absolute;
   top: 50%;
   left: 4%;
+  z-index: 1;
 }
 
 .right_arrow {
   position: absolute;
   top: 50%;
   right: 4%;
+  z-index: 1;
 }
 
 #left_arrow:hover {
@@ -214,6 +274,11 @@ li a:hover {
 
 #red_slide {
   max-width: 100%;
+}
+
+.image_wrapper {
+  display: flex;
+  margin: 0 auto;
 }
 
 #wrapper-services {

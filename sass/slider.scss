@@ -1,12 +1,11 @@
 #wrapper_slider{
-  background-color: #F06C64;
+  background-color: yellow;
 }
 
 .slider_content {
   display: flex;
   max-width: 1020px;
   position: relative;
-  overflow: hidden;
   margin: 0 auto;
 
 }
@@ -15,12 +14,14 @@
   position: absolute;
   top: 50%;
   left: 4%;
+  z-index: 1;
 }
 
 .right_arrow {
   position: absolute;
   top: 50%;
   right: 4%;
+  z-index: 1;
 }
 
 #left_arrow:hover {
@@ -38,6 +39,11 @@
 #red_slide{
   max-width: 100%;
 }
+
+.image_wrapper{
+  display: flex;
+  margin: 0 auto;
+ }
 
 
 @media (min-width: 768px) and (max-width:1019px){
