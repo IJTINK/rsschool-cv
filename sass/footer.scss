@@ -55,13 +55,54 @@
   }
 
 
+
+  @media (min-width: 768px) and (max-width:1019px){
+
+  .icons {
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 30px 22px 0;
+  }
+  }
+
+
+
   @media (min-width: 375px) and (max-width:767px){
  
     .copyright{
       display: none;
     }
+
 .footer{
     display: flex;
     justify-content: center;}
 
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 0 22px 0;
   }
+
+
+  }
+
+
+  @media (min-width: 320px) and (max-width:374px){
+
+
+
+.copyright{
+  display: none;
+}
+
+.icons {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 0 22px 0;
+}
+  }
+
+  
+
