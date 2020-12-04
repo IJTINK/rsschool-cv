@@ -15,24 +15,21 @@
   margin: 0 auto;
   overflow: hidden;
   width: 100%;
-  }
+}
 
-
-  #line{
-    display: flex;
-width: 100%;
-transition: all 1s;
-  }
+#line {
+  display: flex;
+  width: 100%;
+  transition: all 1s;
+}
 
 #red_slide {
   width: 100%;
-
 }
 
 #blue_slide {
   width: 100%;
 }
-
 
 .left_arrow {
   position: absolute;
