@@ -1,0 +1,133 @@
+@import "colors.scss";
+
+#wrapper-porfolio {
+  background-color: #2d303a;
+  border-bottom: 6px solid #323746;
+}
+
+.portfolio {
+  max-width: 1020px;
+  margin: 0 auto;
+  background-color: #2d303a;
+  padding: 60px 0px 68px 0px;
+}
+
+.portfolio_context {
+  margin: 0 20px 0 40px;
+}
+
+.portfolio-description h2 {
+  margin: 0;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+  color: #666d89;
+}
+
+.portfolio-description p {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  color: #767e9e;
+}
+
+.portfolio-images-block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.portfolio-image:nth-child(1n + 13) {
+  display: none;
+}
+
+.portfolio-item {
+  border: 1px solid #767e9e;
+  box-sizing: border-box;
+  border-radius: 5px;
+  display: inline-block;
+  margin-right: 10px;
+  padding: 5px;
+
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  color: #767e9e;
+}
+.portfolio-item:hover {
+  border-color: #dedede;
+  cursor: pointer;
+  color: #dedede;
+}
+
+.portfolio_button_active {
+  border-color: #dedede;
+  cursor: pointer;
+  color: #dedede;
+}
+
+.portfolio-image:hover {
+  cursor: pointer;
+  box-shadow: 0 0 30px white;
+}
+
+.portfolio-list {
+  padding: 0;
+}
+
+@media (min-width: 768px) and (max-width: 1019px) {
+  .portfolio-description p {
+    padding-right: 70px;
+  }
+
+  .portfolio-image {
+    width: calc(33% - 20px);
+  }
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+  .portfolio {
+    padding: 42px 0px 68px 0px;
+  }
+
+  .portfolio-description p {
+    padding-right: 70px;
+  }
+
+  .portfolio-image {
+    width: calc(50% - 20px);
+  }
+  .portfolio-images-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .portfolio-description p {
+    text-align: justify;
+  }
+
+  .portfolio-image:nth-child(1n + 9) {
+    display: none;
+  }
+}
+
+@media (max-width: 374px) {
+  .portfolio-item {
+    margin: 20px 0;
+  }
+
+  .portfolio-description p {
+    padding-right: 70px;
+  }
+
+  .portfolio-image {
+    width: calc(100% - 20px);
+  }
+}
