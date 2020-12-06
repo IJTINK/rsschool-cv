@@ -6,55 +6,38 @@
     <link rel="stylesheet" href="style.css">
     <title>Calculator</title>
 </head>
-
 <body>
-
-   <main> 
-    <div class="calculator_wrapper">
-
-        <div class="display">
-        <input id="display" disabled type="text"  class="result" value = "0">
+    <main> 
+        <div class="calculator_wrapper">
+            <div class="display">
+                <input id="display" disabled type="text"  class="result" value = "0">
+            </div>
+            <div class="button_field">
+                 <div class="left_field">
+                    <button id="cleanEntry" type="button" class="cleanEntry clearButton left_field_button" >CE</button>
+                    <button id="clean" type="button" class="clean clearButton left_field_button">C</button>
+                    <button id="division" type="button" class="division operation left_field_button">/</button>
+                    <button id="seven" type="button" class="number left_field_button">7</button>
+                    <button id="eight" type="button" class="number left_field_button">8</button>
+                    <button id="nine" type="button" class="number left_field_button">9</button>
+                    <button id="four" type="button" class="number left_field_button">4</button>
+                    <button id="five" type="button" class="number left_field_button">5</button>
+                    <button id="six" type="button" class="number left_field_button">6</button>
+                    <button id="one" type="button" class="number left_field_button">1</button>
+                    <button id="two" type="button" class="number left_field_button">2</button>
+                    <button id="three" type="button" class="number left_field_button">3</button>
+                    <button id="zero" type="button" class="number left_field_button wide_button">0</button>
+                    <button id="point" type="button" class="point left_field_button">.</button>
+                </div>
+                <div class="right_field">
+                    <button id="multiplication" type="button" class="multiplication operation right_field_button">*</button>
+                    <button id="minus" type="button" class="subtraction operation right_field_button">-</button>
+                    <button id="plus" type="button" class="addition operation right_field_button">+</button>
+                    <button id="equal" type="button" class="equal right_field_button high_button" >=</button>
+                </div>
+            </div>
         </div>
-
-    <div class="button_field">
-        <div class="left_field">
-            <button id="cleanEntry" type="button" class="cleanEntry clearButton left_field_button" >CE</button>
-            <button id="clean" type="button" class="clean clearButton left_field_button">C</button>
-            <button id="division" type="button" class="division operation left_field_button">/</button>
-        
-
-            <button id="seven" type="button" class="number left_field_button">7</button>
-            <button id="eight" type="button" class="number left_field_button">8</button>
-            <button id="nine" type="button" class="number left_field_button">9</button>
-            
-
-            <button id="four" type="button" class="number left_field_button">4</button>
-            <button id="five" type="button" class="number left_field_button">5</button>
-            <button id="six" type="button" class="number left_field_button">6</button>
-            
-
-            <button id="one" type="button" class="number left_field_button">1</button>
-            <button id="two" type="button" class="number left_field_button">2</button>
-            <button id="three" type="button" class="number left_field_button">3</button>
-        
-
-            <button id="zero" type="button" class="number left_field_button wide_button">0</button>
-            <button id="point" type="button" class="point left_field_button">.</button>
-        </div>
-
-        <div class="right_field">
-            <button id="multiplication" type="button" class="multiplication operation right_field_button">*</button>
-            <button id="minus" type="button" class="subtraction operation right_field_button">-</button>
-            <button id="plus" type="button" class="addition operation right_field_button">+</button>
-            <button id="equal" type="button" class="equal right_field_button high_button" >=</button>
-        </div>
-    </div>    
-
-
-</div>
-</main>
-
-<script src="main.js"></script>
-
+    </main>
+    <script src="main.js"></script>
 </body>
 </html>
