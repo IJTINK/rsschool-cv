@@ -1,3 +1,4 @@
+// variables
 let numbers = document.querySelectorAll(".number");
 let operations = document.querySelectorAll(".operation");
 let equalButton = document.getElementById("equal");
@@ -12,6 +13,7 @@ let number_1 = "";
 let number_2 = "";
 let operation = "";
 
+// number
 let functionPressNumber = (e) => {
   number += e.target.textContent;
   if (number.length > 1 && number[0] === "0" && number[0] + number[1] != "0.") {
@@ -25,6 +27,7 @@ let functionPressNumber = (e) => {
   }
 };
 
+// operation
 let functionPressOperation = (e) => {
   if (number_1 === "") {
     number_1 = 0;
@@ -37,6 +40,7 @@ let functionPressOperation = (e) => {
   point = false;
 };
 
+// equal
 let functionEqual = () => {
   let equal = parseFloat(eval(number_1 + operation + number_2).toFixed(10));
   display.value = equal;
@@ -47,6 +51,7 @@ let functionEqual = () => {
   point = false;
 };
 
+// point
 let functionPressPoint = () => {
   if (!point) {
     number += ".";
@@ -63,18 +68,24 @@ let functionPressPoint = () => {
   }
 };
 
+// event equal
 equalButton.addEventListener("click", functionEqual);
+
+// event point
 pointButton.addEventListener("click", functionPressPoint);
 
+// event operation
 for (let i = 0; i < operations.length; i++) {
   operations[i].addEventListener("click", functionPressOperation);
 }
 
+// event number
 for (let i = 0; i < numbers.length; i++) {
   let number = numbers[i];
   number.addEventListener("click", functionPressNumber);
 }
 
+// clean
 cleanButton.addEventListener("click", () => {
   display.value = 0;
   number_1 = "";
@@ -84,6 +95,7 @@ cleanButton.addEventListener("click", () => {
   point = false;
 });
 
+// cleanEntry
 cleanEntryButton.addEventListener("click", () => {
   number_2 = "";
   number = "";
