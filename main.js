@@ -23,30 +23,30 @@ setTimeout(showTime, 1000);
 
 
 let changeBackgroundAndMeeting = () => {
-let day = new Date();
-let hour = day.getHours();
+    let day = new Date();
+    let hour = day.getHours();
 
-if(hour < 12){
-document.body.style.backgroundImage = "url('/images/morning.jpg')";
-greeting.innerHTML = "Good morning,"
-}else
-if(hour < 18){
-    document.body.style.backgroundImage = "url('/images/afternoon.jpg')";
-    greeting.innerHTML = "Good afternoon,"
-}else{
-    document.body.style.backgroundImage = "url('/images/evening.jpg')";  
-    greeting.innerHTML = "Good evening,"
-}
+    if(hour < 12){
+    document.body.style.backgroundImage = "url('/images/morning.jpg')";
+    greeting.innerHTML = "Good morning,"
+    }else
+    if(hour < 18){
+        document.body.style.backgroundImage = "url('/images/afternoon.jpg')";
+        greeting.innerHTML = "Good afternoon,"
+    }else{
+        document.body.style.backgroundImage = "url('/images/evening.jpg')";  
+        greeting.innerHTML = "Good evening,"
+    }
 }
 
-// let inputName = () => {
-//     if(localStorage.getItem("nameOfUser") === null){
-//         nameOfUser.textContent = "Input your name";
-//     }else{
-//         nameOfUser.textContent = localStorage.getItem('nameOfUser');
-//     }
-// }
+let inputName = () => {
+    if(localStorage.getItem("nameOfUser") === null){
+        nameOfUser.textContent = "Input your name";
+    }else{
+        nameOfUser.textContent = localStorage.getItem("nameOfUser");
+    }
+}
 
 showTime();
 changeBackgroundAndMeeting();
-// inputName();
+inputName();
