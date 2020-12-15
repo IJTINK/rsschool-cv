@@ -18,3 +18,10 @@ body{
 #currentTime{
     font-size: 10em;
 }
+#question{
+    font-size: 2em;
+}
+
+p{
+    text-align: center;
+}
