@@ -16,15 +16,15 @@ let operation = "";
 // number
 let PressNumber = (e) => {
     intermediateMemory += e.target.textContent;
-  if (intermediateMemory.length > 1 && intermediateMemory[0] === "0" && intermediateMemory[0] + intermediateMemory[1] != "0.") {
-    intermediateMemory = intermediateMemory.slice(-1);                                                 
-  }
-  display.value = intermediateMemory;
-  if (operation === "") {
-    firstMemory = intermediateMemory;
-  } else {
-    secondMemory = intermediateMemory;
-  }
+    if (intermediateMemory.length > 1 && intermediateMemory[0] === "0" && intermediateMemory[0] + intermediateMemory[1] != "0.") {
+        intermediateMemory = intermediateMemory.slice(-1);                                                 
+    }
+    display.value = intermediateMemory;
+    if (operation === "") {
+        firstMemory = intermediateMemory;
+    } else {
+        secondMemory = intermediateMemory;
+    }
 };
 
 // operation
@@ -56,7 +56,7 @@ let PressPoint = () => {
   if (!point) {
     intermediateMemory += ".";
     if (intermediateMemory === ".") {
-    intermediateMemory = "0.";
+        intermediateMemory = "0.";
     }
     display.value = intermediateMemory;
     if (operation === "") {
@@ -81,8 +81,7 @@ for (let i = 0; i < operations.length; i++) {
 
 // event number
 for (let i = 0; i < numbers.length; i++) {
-  let number = numbers[i];
-  number.addEventListener("click", PressNumber);
+    numbers[i].addEventListener("click", PressNumber);
 }
 
 // clean
@@ -97,8 +96,11 @@ cleanButton.addEventListener("click", () => {
 
 // cleanEntry
 cleanEntryButton.addEventListener("click", () => {
-  secondMemory = "";
-  intermediateMemory = "";
-  point = false;
-  display.value = 0;
+    if (operation === ""){
+        firstMemory = "";
+    }
+    secondMemory = "";
+    intermediateMemory = "";
+    point = false;
+    display.value = 0;
 });
