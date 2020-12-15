@@ -8,97 +8,97 @@ let pointButton = document.getElementById("point");
 let display = document.getElementById("display");
 
 let point = false;
-let number = "";
-let number_1 = "";
-let number_2 = "";
+let intermediateMemory = "";
+let firstMemory = "";
+let secondMemory = "";
 let operation = "";
 
 // number
-let functionPressNumber = (e) => {
-  number += e.target.textContent;
-  if (number.length > 1 && number[0] === "0" && number[0] + number[1] != "0.") {
-    number = number.slice(-1);                                                      // Why?
+let PressNumber = (e) => {
+    intermediateMemory += e.target.textContent;
+  if (intermediateMemory.length > 1 && intermediateMemory[0] === "0" && intermediateMemory[0] + intermediateMemory[1] != "0.") {
+    intermediateMemory = intermediateMemory.slice(-1);                                                 
   }
-  display.value = number;
+  display.value = intermediateMemory;
   if (operation === "") {
-    number_1 = number;
+    firstMemory = intermediateMemory;
   } else {
-    number_2 = number;
+    secondMemory = intermediateMemory;
   }
 };
 
 // operation
-let functionPressOperation = (e) => {
-  if (number_1 === "") {
-    number_1 = 0;
-  } else if (number_2 != "") {
-    functionEqual();
+let PressOperation = (e) => {
+  if (firstMemory === "") {
+    firstMemory = 0;
+  } else if (secondMemory != "") {
+    Equal();
   }
   operation = e.target.textContent;
   display.value = 0;
-  number = "";
+  intermediateMemory = "";
   point = false;
 };
 
 // equal
-let functionEqual = () => {
-  let equal = parseFloat(eval(number_1 + operation + number_2).toFixed(10));
+let Equal = () => {
+  let equal = parseFloat(eval(firstMemory + operation + secondMemory).toFixed(10));
   display.value = equal;
-  number_1 = equal;
+  firstMemory = equal;
   operation = "";
-  number_2 = "";
-  number = "";
+  secondMemory = "";
+  intermediateMemory = "";
   point = false;
 };
 
 // point
-let functionPressPoint = () => {
+let PressPoint = () => {
   if (!point) {
-    number += ".";
-    if (number === ".") {
-      number = "0.";
+    intermediateMemory += ".";
+    if (intermediateMemory === ".") {
+    intermediateMemory = "0.";
     }
-    display.value = number;
+    display.value = intermediateMemory;
     if (operation === "") {
-      number_1 = number;
+      firstMemory = intermediateMemory;
     } else {
-      number_2 = number;
+      secondMemory = intermediateMemory;
     }
     point = true;
   }
 };
 
 // event equal
-equalButton.addEventListener("click", functionEqual);
+equalButton.addEventListener("click", Equal);
 
 // event point
-pointButton.addEventListener("click", functionPressPoint);
+pointButton.addEventListener("click", PressPoint);
 
 // event operation
 for (let i = 0; i < operations.length; i++) {
-  operations[i].addEventListener("click", functionPressOperation);
+  operations[i].addEventListener("click", PressOperation);
 }
 
 // event number
 for (let i = 0; i < numbers.length; i++) {
   let number = numbers[i];
-  number.addEventListener("click", functionPressNumber);
+  number.addEventListener("click", PressNumber);
 }
 
 // clean
 cleanButton.addEventListener("click", () => {
   display.value = 0;
-  number_1 = "";
-  number_2 = "";
+  firstMemory = "";
+  secondMemory = "";
   operation = "";
-  number = "";
+  intermediateMemory = "";
   point = false;
 });
 
 // cleanEntry
 cleanEntryButton.addEventListener("click", () => {
-  number_2 = "";
-  number = "";
+  secondMemory = "";
+  intermediateMemory = "";
   point = false;
   display.value = 0;
 });
