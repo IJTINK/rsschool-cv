@@ -3,9 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Meditation App</title>
 </head>
 <body>
-    
+    <div class="app">
+
+        <div class="video">
+            <video src="videos/forest.mp4"></video>
+        </div>
+
+        <div class="duration-of-music">
+            <button data-time="30" class="duration-thirty-sec"></button>
+            <button data-time="60" class="duration-one-min"></button>
+            <button data-time="300" class="duration-five-min"></button>
+        </div>
+        <div class="player">
+            <button class="play-button "></button>
+            <button class="pause-button"></button>
+
+        </div>
+        <div class="weather">
+            <button class="forest-icon">
+                <audio src="audios/forest.mp3">
+                </audio>
+            </button>
+            <button class="fire-icon" >
+                <audio src="audios/forest.mp3"></audio>
+            </button>
+        </div>
+    </div>
 </body>
 </html>
