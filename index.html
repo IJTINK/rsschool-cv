@@ -8,31 +8,35 @@
 </head>
 <body>
     <div class="app">
-
         <div class="video-container">
-            <video class="video">
-                <source src="videos/forest.mp4"> 
+            <video id="video-forest" class="video" loop>
+                <source src="videos/forest.mp4" type="video/mp4">
+            </video>
+            <video id="video-fire" class="video" loop>
+                <source src="videos/fire.mp4" type="video/mp4">
             </video>
         </div>
 
         <div class="duration-of-music">
-            <button data-time="30" class="duration-thirty-sec"></button>
-            <button data-time="60" class="duration-one-min"></button>
-            <button data-time="300" class="duration-five-min"></button>
+            <button data-time="30000" class="duration-thirty-sec js-duration-button"></button>
+            <button data-time="60000" class="duration-one-min js-duration-button"></button>
+            <button data-time="300000" class="duration-five-min js-duration-button"></button>
         </div>
         <div class="player">
-            <audio class="audio">
+            <audio id="audio-forest" class="audio" loop>
                 <source src="audios/forest.mp3">
-            </audio>
+            </audio> 
+            <audio id="audio-fire" class="audio" loop>
+                <source src="audios/fire.mp3">
+            </audio> 
             <button class="play-button"></button>
-            <button class="pause-button"></button>
-            <button class="repeat-button"></button>
+            <button id="repeat" class="repeat-button"></button>
             <h1 class="time-display">0:00</h1>
 
         </div>
         <div class="weather-buttons">
-            <button class="forest-icon" data-sound="sounds/forest.mp3" data-video="videos/forest.mp4"></button> 
-            <button class="fire-icon" data-sound="sounds/fire.mp3" data-video="videos/fire.mp4"></button>
+            <button id="button-forest" class="forest-icon" data-sound="sounds/forest.mp3" data-video="videos/forest.mp4"></button> 
+            <button id="button-fire" class="fire-icon" data-sound="sounds/fire.mp3" data-video="videos/fire.mp4"></button>
         </div>
     </div>
     <script src="main.js"></script>

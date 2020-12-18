@@ -41,7 +41,6 @@
 
 }
 
-
 .player{
     position: relative;
     height: 90%;
@@ -54,61 +53,155 @@
 }
 
 .duration-thirty-sec{
-    background-image: url(/images/30_sec.svg);
-    background-size: cover;
+    background: url(/images/30_sec.svg) no-repeat center;
+    background-size: 70%;
+    cursor: pointer;
+    transition: 0.35s ease;
+    -webkit-transition: 0.35s ease;
+    -moz-transition: 0.35s ease;
+    -ms-transition: 0.35s ease;
+    -o-transition: 0.35s ease;
+}
+.duration-thirty-sec:hover {
+    transform: scale(1.1);
+    transition: 0.15s;
+    -webkit-transition: 0.15s;
+    -moz-transition: 0.15s;
+    -ms-transition: 0.15s;
+    -o-transition: 0.15s;
 }
 
 .duration-one-min{
-    background-image: url(/images/1_min.svg);
-    background-size: cover;
+    background: url(/images/1_min.svg) no-repeat center;
+    background-size: 70%;
+    cursor: pointer;
+    transition: 0.35s ease;
+    -webkit-transition: 0.35s ease;
+    -moz-transition: 0.35s ease;
+    -ms-transition: 0.35s ease;
+    -o-transition: 0.35s ease;
+}
+.duration-one-min:hover {
+    transform: scale(1.1);
+    transition: 0.15s;
+    -webkit-transition: 0.15s;
+    -moz-transition: 0.15s;
+    -ms-transition: 0.15s;
+    -o-transition: 0.15s;
 }
 
 .duration-five-min{
-    background-image: url(/images/5_min.svg);
-    background-size: cover;
+    background: url(/images/5_min.svg) no-repeat center;
+    background-size: 70%;
+    cursor: pointer;
+    transition: 0.35s ease;
+    -webkit-transition: 0.35s ease;
+    -moz-transition: 0.35s ease;
+    -ms-transition: 0.35s ease;
+    -o-transition: 0.35s ease;
+}
+.duration-five-min:hover {
+    transform: scale(1.1);
+    transition: 0.15s;
+    -webkit-transition: 0.15s;
+    -moz-transition: 0.15s;
+    -ms-transition: 0.15s;
+    -o-transition: 0.15s;
 }
 
 
 .forest-icon{
     background-image: url(/images/forest-button.svg);
     background-size: cover;
+    cursor: pointer;
+    transition: 0.35s ease;
+    -webkit-transition: 0.35s ease;
+    -moz-transition: 0.35s ease;
+    -ms-transition: 0.35s ease;
+    -o-transition: 0.35s ease;
+}
+.forest-icon:hover {
+    transform: scale(1.1);
+    transition: 0.15s;
+    -webkit-transition: 0.15s;
+    -moz-transition: 0.15s;
+    -ms-transition: 0.15s;
+    -o-transition: 0.15s;
 }
 
 .fire-icon{
     background-image: url(/images/fire-button.svg);
     background-size: cover;
-    }
+    cursor: pointer;
+    transition: 0.35s ease;
+    -webkit-transition: 0.35s ease;
+    -moz-transition: 0.35s ease;
+    -ms-transition: 0.35s ease;
+    -o-transition: 0.35s ease;
+}
+.fire-icon:hover {
+    transform: scale(1.1);
+    transition: 0.15s;
+    -webkit-transition: 0.15s;
+    -moz-transition: 0.15s;
+    -ms-transition: 0.15s;
+    -o-transition: 0.15s;
+}
 
 .play-button{
     background-image: url(/images/play-button.svg);
     background-size: cover;
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-   
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto auto;
+    cursor: pointer;
+    transition: 0.35s ease;
+    -webkit-transition: 0.35s ease;
+    -moz-transition: 0.35s ease;
+    -ms-transition: 0.35s ease;
+    -o-transition: 0.35s ease;
 }
-
-.pause-button{
-    background-image: url(/images/pause-button.svg);
-    background-size: cover;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
+.play-button:hover {
+    transform: scale(1.1);
+    transition: 0.15s;
+    -webkit-transition: 0.15s;
+    -moz-transition: 0.15s;
+    -ms-transition: 0.15s;
+    -o-transition: 0.15s;
+}
+.play-button.active{
+    background-image: url(/images/pause-button.svg);    
 }
 
 .repeat-button{
-    background-image: url(/images/repeat.svg);
-    background-size:cover;
+    background: url(/images/repeat.svg) no-repeat center;
+    background-size: 70%;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     position: absolute;
-    left: 50%;
-    top: 60%;
-    transform: translate(-50%, -50%);
+    top: 200px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto auto;
+    cursor: pointer;
+    transition: 0.35s ease;
+    -webkit-transition: 0.35s ease;
+    -moz-transition: 0.35s ease;
+    -ms-transition: 0.35s ease;
+    -o-transition: 0.35s ease;
+}
+.repeat-button:hover {
+    transform: scale(1.1);
+    transition: 0.15s;
+    -webkit-transition: 0.15s;
+    -moz-transition: 0.15s;
+    -ms-transition: 0.15s;
+    -o-transition: 0.15s;
 }
 
 .time-display{
@@ -120,10 +213,37 @@
     font-size: 7em;
 }
 
-.video{
+/* video */
+.video-container {
     position: fixed;
-    left: 0;
     top: 0;
-    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
     z-index: -1;
+    background: url(images/nature.jpg);
+    background-size: cover;
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+.video.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+button{
+    outline: none;
 }
