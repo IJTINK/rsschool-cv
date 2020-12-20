@@ -30,7 +30,7 @@ body{
 
 .major,
 .minor,
-.sharp{
+.modify{
     width: 33.33%; 
     display: flex;
     flex-direction: column;
@@ -54,7 +54,7 @@ margin-bottom: 50px;
 .minor{
     background-color: blueviolet;
 }
-.sharp{
+.modify{
     background-color: green;
 }
 
@@ -63,10 +63,13 @@ margin-bottom: 50px;
 
 
 .chord{
-    width: 100px;
-    height: 100px;
+    vertical-align: middle;
+    text-align: center;
+    width: 80px;
+    height: 80px;
     border: 3px solid black;
-    font-size: 60px;
+    font-size: 65px;
+    margin: 10px;
 }
 
 
