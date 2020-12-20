@@ -53,7 +53,7 @@
 }
 
 .duration-thirty-sec{
-    background: url(/images/30_sec.svg) no-repeat center;
+    background: url("./images/30_sec.svg") no-repeat center;
     background-size: 70%;
     cursor: pointer;
     transition: 0.35s ease;
@@ -72,7 +72,7 @@
 }
 
 .duration-one-min{
-    background: url(/images/1_min.svg) no-repeat center;
+    background: url("./images/1_min.svg") no-repeat center;
     background-size: 70%;
     cursor: pointer;
     transition: 0.35s ease;
@@ -91,7 +91,7 @@
 }
 
 .duration-five-min{
-    background: url(/images/5_min.svg) no-repeat center;
+    background: url("./images/5_min.svg") no-repeat center;
     background-size: 70%;
     cursor: pointer;
     transition: 0.35s ease;
@@ -111,7 +111,7 @@
 
 
 .forest-icon{
-    background-image: url(/images/forest-button.svg);
+    background-image: url("./images/forest-button.svg");
     background-size: cover;
     cursor: pointer;
     transition: 0.35s ease;
@@ -130,7 +130,7 @@
 }
 
 .fire-icon{
-    background-image: url(/images/fire-button.svg);
+    background-image: url("./images/fire-button.svg");
     background-size: cover;
     cursor: pointer;
     transition: 0.35s ease;
@@ -149,7 +149,7 @@
 }
 
 .play-button{
-    background-image: url(/images/play-button.svg);
+    background-image: url("./images/play-button.svg");
     background-size: cover;
     position: absolute;
     top: 0;
@@ -173,11 +173,11 @@
     -o-transition: 0.15s;
 }
 .play-button.active{
-    background-image: url(/images/pause-button.svg);    
+    background-image: url("./images/pause-button.svg");    
 }
 
 .repeat-button{
-    background: url(/images/repeat-button.svg) no-repeat center;
+    background: url("./images/repeat-button.svg") no-repeat center;
     background-size: 70%;
     width: 50px;
     height: 50px;
@@ -221,7 +221,7 @@
     right: 0;
     bottom: 0;
     z-index: -1;
-    background: url(images/nature.jpg);
+    background: url("images/nature.jpg");
     background-size: cover;
 }
 
