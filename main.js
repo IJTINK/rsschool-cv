@@ -52,7 +52,7 @@ let startTimer = () => {
         clearInterval(timeInterval);
         timeMemory = time;
     },time);
-}
+};
 
 buttonForest.addEventListener('click', () => {
     videoFire.classList.remove('active');
@@ -100,10 +100,10 @@ play.addEventListener('click', () => {
         pause();
         clearInterval(timeInterval);
     }
-})
+});
 
-durationButtons.forEach(durButton => {
-    durButton.addEventListener("click", (e) => {
+durationButtons.forEach(durationButton => {
+    durationButton.addEventListener("click", (e) => {
         time = e.target.getAttribute("data-time");
         timeMemory = time;
         setTime();
