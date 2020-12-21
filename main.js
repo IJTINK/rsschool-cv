@@ -33,25 +33,25 @@ let changeBackgroundAndMeeting = () => {
     }
 }
 
-// let inputName = () => {
-//     if(localStorage.getItem("nameOfUser") === null){
-//         nameOfUser.textContent = "Input your name";
-//     }else{
-//         nameOfUser.textContent = localStorage.getItem("nameOfUser");
-//     }
-// }
+let inputName = () => {
+    if(localStorage.getItem("nameOfUser") === null){
+        nameOfUser.textContent = "Input your name";
+    }else{
+        nameOfUser.textContent = localStorage.getItem("nameOfUser");
+    }
+}
 
-// let setName = (e) =>{
-//     if (e.type === "keydown"){
-//         if(e.which == 13 || e.key == 13){
-//             localStorage.setItem('nameOfUser', e.target.innerText);
-//             nameOfUser.blur();
-//         }
-//     }else{
-//         localStorage.setItem('nameOfUser', e.target.innerText);
-//     }
-// }
+let setName = (e) =>{
+    if (e.type === "keydown"){
+        if(e.which == 13 || e.key == 13){
+            localStorage.setItem('nameOfUser', e.target.innerText);
+            nameOfUser.blur();
+        }
+    }else{
+        localStorage.setItem('nameOfUser', e.target.innerText);
+    }
+}
 
 showTime();
 changeBackgroundAndMeeting();
-// nameOfUser.addEventListener("keydown", inputName);
+nameOfUser.addEventListener("keydown", inputName);
