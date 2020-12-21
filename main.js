@@ -70,15 +70,8 @@ buttonFire.addEventListener('click', () => {
     }
 });
 
-repeat.addEventListener('click', () => {
-    timeMemory = time;
-    setTime();
-    clearTimeout(timeWaiting);
-    startTimer();
-});
-
 play.addEventListener('click', () => {
-    play.classList.toggle("active");;
+    play.classList.toggle("active");
     if ( play.classList.contains("active") ) {
         if ( videoFire.classList.contains('active') ) {
             playFire();
@@ -100,6 +93,13 @@ play.addEventListener('click', () => {
         pause();
         clearInterval(timeInterval);
     }
+});
+
+repeat.addEventListener('click', () => {
+    timeMemory = time;
+    setTime();
+    clearTimeout(timeWaiting);
+    startTimer();
 });
 
 durationButtons.forEach(durationButton => {
