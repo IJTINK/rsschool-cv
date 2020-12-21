@@ -1,7 +1,5 @@
-let audio = document.querySelector(".audio");
 let play = document.querySelector(".play-button");
 let video = document.querySelector(".video");
-let songs = document.querySelectorAll(".weather-buttons button");
 let timeDisplay = document.querySelector(".time-display");
 
 let buttonForest = document.getElementById("button-forest");
@@ -37,6 +35,8 @@ let pause = () => {
     videoFire.pause();
     audioFire.pause();
 };
+
+
 
 let setTime = () => {
     let minutes = parseInt(timeMemory/60000);
