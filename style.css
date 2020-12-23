@@ -72,4 +72,6 @@ margin-bottom: 50px;
     margin: 10px;
 }
 
-
+.chord:hover{
+    cursor: pointer;
+}
