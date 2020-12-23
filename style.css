@@ -25,3 +25,34 @@ body{
 p{
     text-align: center;
 }
+
+@media (max-width: 700px){
+
+    #currentTime{
+        font-size: 6em;
+    }
+    #question{
+        font-size: 1em;
+    }
+    
+    p{
+        text-align: center;
+    }
+}
+
+@media (max-width: 375px){
+
+    #currentTime{
+        font-size: 4em;
+    }
+    
+    #question,
+    .greeting,
+    .nameOfUser{
+        font-size: 0.5em;
+    }
+    
+    p{
+        text-align: center;
+    }
+}

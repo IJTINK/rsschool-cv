@@ -13,25 +13,28 @@ let minute = day.getMinutes();
 let second = day.getSeconds();
 currentTime.textContent = (hour < 10 ? "0" : '') + hour + ":" + (minute < 10 ? "0" : '') + minute + ":" + (second < 10 ? "0" : '') + second;
 setTimeout(showTime, 1000);
-}
-
+};
+showTime();
 
 let changeBackgroundAndMeeting = () => {
     let day = new Date();
     let hour = day.getHours();
 
     if(hour < 12){
-    document.body.style.backgroundImage = "url('/images/morning.jpg')";
+    document.body.style.backgroundImage = "url('./images/morning.jpg')";
     greeting.textContent = "Good morning,"
     }else
     if(hour < 18){
-        document.body.style.backgroundImage = "url('/images/afternoon.jpg')";
+        document.body.style.backgroundImage = "url('./images/afternoon.jpg')";
         greeting.textContent = "Good afternoon,"
     }else{
-        document.body.style.backgroundImage = "url('/images/evening.jpg')";  
+        document.body.style.backgroundImage = "url('./images/evening.jpg')";  
         greeting.textContent = "Good evening,"
     }
-}
+};
+
+changeBackgroundAndMeeting();
+
 
 let inputName = () => {
     if(localStorage.getItem("nameOfUser") === null){
@@ -52,6 +55,5 @@ let setName = (e) =>{
     }
 }
 
-showTime();
-changeBackgroundAndMeeting();
-nameOfUser.addEventListener("keydown", inputName);
+nameOfUser.addEventListener("keydown", setName);
+nameOfUser.addEventListener("blur", setName);
