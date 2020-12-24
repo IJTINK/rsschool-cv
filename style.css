@@ -1,11 +1,14 @@
 :root {
+  --color: #f8fb41;
   --scale: 1;
   --invert: 0;
   --blur: 0px;
-  --color: #ffffff;
+  --grayscale: 0;
+  --sepia:0;
 }
 body {
   background-color: var(--color,#ff0000);
+  font-size: 2em;
 }
 h1{
   text-align: center; 
@@ -24,5 +27,5 @@ h1{
 
 .image-container img {
   transform: scale(var(--scale,1));
-  filter: invert(var(--invert,0)) blur(var(--blur,0px));
+  filter: invert(var(--invert,0)) blur(var(--blur,0px)) grayscale(var(--grayscale,0px)) sepia(var(--sepia,0)) ;
 }
