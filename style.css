@@ -11,8 +11,6 @@ body{
     background: url("/img/guitar.jpg");
 }
 
-
-
 .container{
     margin: 40vh 0;
     display: flex;
@@ -22,9 +20,7 @@ body{
     align-content: center;
 }
 
-.major,
-.minor,
-.modify{
+.major,.minor,.modify{
     width: 33.33%; 
     display: flex;
     flex-direction: column;
@@ -41,7 +37,6 @@ margin-bottom: 50px;
     justify-content: space-evenly;
 }
 
-
 .major .chord{
     border: 5px solid blue;
     color: blue;
@@ -54,9 +49,6 @@ margin-bottom: 50px;
     border: 5px solid yellow;
     color: yellow;
 }
-
-
-
 
 .chord{
     vertical-align: middle;
