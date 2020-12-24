@@ -1,3 +1,12 @@
+:root {
+  --scale: 1;
+  --invert: 0;
+  --blur: 0px;
+  --color: #ffffff;
+}
+body {
+  background-color: var(--color,#ff0000);
+}
 h1{
   text-align: center; 
   margin: 100px; 
@@ -11,4 +20,9 @@ h1{
 .range-wrapper{
     display: flex;
     flex-direction: column;
+}
+
+.image-container img {
+  transform: scale(var(--scale,1));
+  filter: invert(var(--invert,0)) blur(var(--blur,0px));
 }
