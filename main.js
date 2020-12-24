@@ -3,7 +3,8 @@ let chords = document.querySelectorAll(".chord");
 
 let playAudio = (key) => {
     for (let audio of audios) {
-        if (audio.getAttribute("data-key") == key) {
+        let dataKey = audio.getAttribute("data-key");
+        if (dataKey.indexOf(key) != "-1") {
             audio.load();
             audio.play();
             break;
@@ -17,7 +18,8 @@ chords.forEach((chord) => {
         playAudio(key);
     });
 });
+
 document.addEventListener("keydown", (e) => {
-    let key = e.which;
+    let key = e.key.toLowerCase();
     playAudio(key);
 });
