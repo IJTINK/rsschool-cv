@@ -8,16 +8,10 @@ body{
     position: relative;
     min-height: 100vh;
     overflow: hidden;
+    background: url("/img/guitar.jpg");
 }
 
-/* .background{
-    position:absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-} */
+
 
 .container{
     margin: 40vh 0;
@@ -48,16 +42,18 @@ margin-bottom: 50px;
 }
 
 
-.major{
-    background-color: yellow;  
+.major .chord{
+    border: 5px solid blue;
+    color: blue;
 }
-.minor{
-    background-color: blueviolet;
+.minor .chord{
+    border: 5px solid rgb(10, 219, 55);
+    color: rgb(10, 219, 55);
 }
-.modify{
-    background-color: green;
+.modify .chord{
+    border: 5px solid yellow;
+    color: yellow;
 }
-
 
 
 
@@ -67,7 +63,6 @@ margin-bottom: 50px;
     text-align: center;
     width: 80px;
     height: 80px;
-    border: 3px solid black;
     font-size: 65px;
     margin: 10px;
 }
