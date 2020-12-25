@@ -42,18 +42,43 @@ let inputName = () => {
     }else{
         nameOfUser.textContent = localStorage.getItem("nameOfUser");
     }
-}
+};
 
-let setName = (e) =>{
-    if (e.type === "keydown"){
-        if(e.which == 13 || e.key == 13){
+let setName = (e) => {
+    if(e.type === "keydown"){
+        if(e.key == "Enter"){
             localStorage.setItem('nameOfUser', e.target.innerText);
             nameOfUser.blur();
         }
     }else{
         localStorage.setItem('nameOfUser', e.target.innerText);
     }
-}
+};
+
+let inputQuestion = () => {
+    if(localStorage.getItem("answer") === null){
+        answer.textContent = "Your answer";
+    }else{
+        answer.textContent = localStorage.getItem("answer");
+    }
+};
+
+let setQuestion = (e) => {
+    if (e.type === "keydown"){
+        if(e.key == "Enter"){
+            localStorage.setItem('answer', e.target.innerText);
+            answer.blur();
+        }
+    }else{
+        localStorage.setItem('answer', e.target.innerText);
+    }
+};
+
 
 nameOfUser.addEventListener("keydown", setName);
 nameOfUser.addEventListener("blur", setName);
+answer.addEventListener("keydown", setQuestion);
+answer.addEventListener("blur", setQuestion);
+
+inputName();
+inputQuestion();
