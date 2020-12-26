@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>VariablesJS</title>
+</head>
+<body>
+    
+    <h1>CSS Variables and JS</h1>
+    <div class="container">
+        <div class="range-wrapper"> 
+            <label for="bg-color">Background color</label>
+            <input class="input" id="bg-color" type="color" value="#f8fb41" data-variable="--color">
+            <label for="scale">Scale</label>
+            <input class="input" id="scale" type="range" min="50" max="150" value="100" data-variable="--scale">
+            <label for="negative">Negative</label>
+            <input class="input" id="negative" type="range" min="0" max="100" value="0" data-variable="--invert">
+            <label for="blur">Blur</label>
+            <input class="input" id="blur" type="range" min="0" max="1000" value="0" data-variable="--blur" data-prefix="px">
+            <label for="grayScale">GrayScale</label>
+            <input class="input" id="grayScale" type="range" min="0" max="100" value="0" data-variable="--grayscale">
+            <label for="sepia">Sepia</label>
+            <input class="input" id="sepia" type="range" min="0" max="100" value="0" data-variable="--sepia">
+        </div>
+        <div class="image-container">
+            <img src="./img/woman.jpg" alt="woman" width="300" height="300">
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
