@@ -1,9 +1,12 @@
-let image = document.querySelectorAll('.image');
+let images = document.querySelectorAll('.image');
 
-let onPressedImage = () => {
-    console.log('Hi');
+let onPressedImage = (e) => {
+    images.forEach((image) => {
+        image.classList.remove("active");
+    })
+    e.target.classList.add("active");
 };
 
-for (let i = 0; i < image.length; i++){
-    image[i].addEventListener('click', onPressedImage)
+for (image of images){
+    image.addEventListener('click', onPressedImage)
 };
