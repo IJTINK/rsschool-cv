@@ -13,7 +13,8 @@ let durationButtons = document.querySelectorAll(".js-duration-button");
 
 let time = durationButtons[0].getAttribute("data-time");
 let timeMemory = time;
-let timeInterval, timeWaiting;
+let timeInterval;
+let timeWaiting;
 
 let playForest = () => {
     videoFire.pause();
@@ -36,8 +37,6 @@ let pause = () => {
     audioFire.pause();
 };
 
-
-
 let setTime = () => {
     let minutes = parseInt(timeMemory/60000);
     let seconds = timeMemory/1000%60;
@@ -54,9 +53,28 @@ let startTimer = () => {
     },time);
 };
 
+let checkVideoSize = () => {
+    let activeVideo = document.getElementsByClassName("video active")[0];
+    if (activeVideo != undefined) {
+        let activeVideo_Height = activeVideo.offsetHeight;
+        let activeVideo_Width = activeVideo.offsetWidth;
+        if (window.innerWidth > activeVideo_Width) {
+            activeVideo.style.width = "100%";
+            activeVideo.style.height = "auto";
+        }
+        else if (window.innerHeight > activeVideo_Height) {
+            activeVideo.style.width = "auto";
+            activeVideo.style.height = "100%";
+        }
+    }
+};
+
+window.addEventListener("resize",checkVideoSize);
+
 buttonForest.addEventListener('click', () => {
     videoFire.classList.remove('active');
     videoForest.classList.add('active');
+    checkVideoSize();
     if ( play.classList.contains("active") ) {
         playForest();
     }
@@ -65,6 +83,7 @@ buttonForest.addEventListener('click', () => {
 buttonFire.addEventListener('click', () => {
     videoForest.classList.remove('active');
     videoFire.classList.add('active');
+    checkVideoSize();
     if ( play.classList.contains("active") ) {
         playFire();
     }
@@ -82,6 +101,7 @@ play.addEventListener('click', () => {
                 videoForest.classList.add('active');
             }
         }
+        checkVideoSize();
         setTime();
         timeInterval = setInterval(() => {
             timeMemory -= 1000;
