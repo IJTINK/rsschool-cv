@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;  
+}
+
+body{
+
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ align-content: center; 
+ height: 100vh;
+}
+
+
+#currentTime{
+    font-size: 10em;
+}
+#question{
+    font-size: 2em;
+}
+
+p{
+    text-align: center;
+}
+
+@media (max-width: 700px){
+
+    #currentTime{
+        font-size: 6em;
+    }
+    #question{
+        font-size: 1em;
+    }
+    
+    p{
+        text-align: center;
+    }
+}
+
+@media (max-width: 375px){
+
+    #currentTime{
+        font-size: 4em;
+    }
+    
+    #question,
+    .greeting,
+    .nameOfUser{
+        font-size: 0.5em;
+    }
+    
+    p{
+        text-align: center;
+    }
+}
