@@ -56,13 +56,13 @@ let startTimer = () => {
 let checkVideoSize = () => {
     let activeVideo = document.getElementsByClassName("video active")[0];
     if (activeVideo != undefined) {
-        let activeVideo_Height = activeVideo.offsetHeight;
-        let activeVideo_Width = activeVideo.offsetWidth;
-        if (window.innerWidth > activeVideo_Width) {
+        let activeVideoHeight = activeVideo.offsetHeight;
+        let activeVideoWidth = activeVideo.offsetWidth;
+        if (window.innerWidth > activeVideoWidth) {
             activeVideo.style.width = "100%";
             activeVideo.style.height = "auto";
         }
-        else if (window.innerHeight > activeVideo_Height) {
+        else if (window.innerHeight > activeVideoHeight) {
             activeVideo.style.width = "auto";
             activeVideo.style.height = "100%";
         }
