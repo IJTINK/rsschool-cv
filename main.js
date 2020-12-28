@@ -1,9 +1,8 @@
-// variables
 let numbers = document.querySelectorAll(".number");
 let operations = document.querySelectorAll(".operation");
 let equalButton = document.getElementById("equal");
 let cleanButton = document.getElementById("clean");
-let cleanEntryButton = document.getElementById("cleanEntry");
+let cleanEntryButton = document.getElementById("clean-entry");
 let pointButton = document.getElementById("point");
 let display = document.getElementById("display");
 
@@ -13,26 +12,37 @@ let firstMemory = "";
 let secondMemory = "";
 let operation = "";
 
-// number
-let PressNumber = (e) => {
+let iterateArray = (nameofArray,nameOfFunction) => {
+  for (let i = 0; i < nameofArray.length; i++) {
+    nameofArray[i].addEventListener("click", nameOfFunction);
+  }
+};
+
+let cleanValue = () => {
+  secondMemory = "";
+  intermediateMemory = "";
+  point = false;
+  display.value = 0;
+}
+
+let onNumberPressed = (e) => {
     intermediateMemory += e.target.textContent;
     if (intermediateMemory.length > 1 && intermediateMemory[0] === "0" && intermediateMemory[0] + intermediateMemory[1] != "0.") {
         intermediateMemory = intermediateMemory.slice(-1);                                                 
     }
     display.value = intermediateMemory;
-    if (operation === "") {
+    if (operation === ""){
         firstMemory = intermediateMemory;
     } else {
         secondMemory = intermediateMemory;
     }
 };
 
-// operation
-let PressOperation = (e) => {
+let onOperationPressed = (e) => {
   if (firstMemory === "") {
     firstMemory = 0;
   } else if (secondMemory != "") {
-    Equal();
+    onEqualPressed();
   }
   operation = e.target.textContent;
   display.value = 0;
@@ -40,8 +50,7 @@ let PressOperation = (e) => {
   point = false;
 };
 
-// equal
-let Equal = () => {
+let onEqualPressed = () => {
   let equal = parseFloat(eval(firstMemory + operation + secondMemory).toFixed(10));
   display.value = equal;
   firstMemory = equal;
@@ -51,8 +60,7 @@ let Equal = () => {
   point = false;
 };
 
-// point
-let PressPoint = () => {
+let onPointPressed = () => {
   if (!point) {
     intermediateMemory += ".";
     if (intermediateMemory === ".") {
@@ -68,39 +76,22 @@ let PressPoint = () => {
   }
 };
 
-// event equal
-equalButton.addEventListener("click", Equal);
+equalButton.addEventListener("click", onEqualPressed);
 
-// event point
-pointButton.addEventListener("click", PressPoint);
+pointButton.addEventListener("click", onPointPressed);
 
-// event operation
-for (let i = 0; i < operations.length; i++) {
-  operations[i].addEventListener("click", PressOperation);
-}
+iterateArray(numbers, onNumberPressed);
+iterateArray(operations, onOperationPressed);
 
-// event number
-for (let i = 0; i < numbers.length; i++) {
-    numbers[i].addEventListener("click", PressNumber);
-}
-
-// clean
 cleanButton.addEventListener("click", () => {
-  display.value = 0;
   firstMemory = "";
-  secondMemory = "";
   operation = "";
-  intermediateMemory = "";
-  point = false;
+  cleanValue();
 });
 
-// cleanEntry
 cleanEntryButton.addEventListener("click", () => {
     if (operation === ""){
         firstMemory = "";
     }
-    secondMemory = "";
-    intermediateMemory = "";
-    point = false;
-    display.value = 0;
+    cleanValue();
 });
