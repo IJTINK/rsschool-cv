@@ -11,17 +11,26 @@
   <body>
     <div class="container">
       <video id="cartoon" src="video/Cartoon.mp4"></video>
+      <div class="progress" width="854" height="50"></div>
     </div>
     <div class="controlPanel">
       <div><button id="play">Play</button></div>
-      <div><button id="pause">Pause</button></div>
       <div><button id="stop">Stop</button></div>
-      <div><button id="speed-down">0.5X</button></div>
-      <div><button id="normal-speed">1X</button></div>
-      <div><button id="speed-up">2X</button></div>
-      <div><input type="range" id="volume" />&#128266;</div>
-      <!-- &#128263; muted -->
+      <div><button id="speed-down">0.5x</button></div>
+      <div><button id="normal-speed">1x</button></div>
+      <div><button id="speed-up">2x</button></div>
+      <input type="range" value="100" id="volumeRange" min=0 max=100 step="1"/>
+      <div id="volumeOn" class="active">🔊</div>
+      <div><button id="rewindBack"> -10sec</button></div>
+      <div><button id="rewindForward"> +10sec</button></div>
+      
+
     </div>
   </body>
   <script src="main.js"></script>
 </html>
+
+
+<!-- &#9658; play
+
+&#9612;   X2 ->> pause -->
