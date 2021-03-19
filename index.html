@@ -9,28 +9,27 @@
     <title>Video Player</title>
   </head>
   <body>
-    <div class="container">
+    <div class="video-container">
       <video id="cartoon" src="video/Cartoon.mp4"></video>
-      <div class="progress" width="854" height="50"></div>
-    </div>
-    <div class="controlPanel">
-      <div><button id="play">Play</button></div>
-      <div><button id="stop">Stop</button></div>
-      <div><button id="speed-down">0.5x</button></div>
-      <div><button id="normal-speed">1x</button></div>
-      <div><button id="speed-up">2x</button></div>
-      <input type="range" value="100" id="volumeRange" min=0 max=100 step="1"/>
-      <div id="volumeOn" class="active">🔊</div>
-      <div><button id="rewindBack"> -10sec</button></div>
-      <div><button id="rewindForward"> +10sec</button></div>
-      
-
+      <div class="controlPanel">
+        <progress id="progress" max="100" value="0"></progress>
+        <div class="controlPanel-buttons">
+          <button id="play"><i class="fas fa-play"></i></button>
+          <button id="stop"><i class="fas fa-stop"></i></button>
+          <button id="speed-down">0.5x</button>
+          <button id="normal-speed">1x</button>
+          <button id="speed-up">2x</button>
+          <input type="range" value="100" id="volumeRange" min="0" max="100"step="1"/>
+          <button id="volumeOn" class="active"><i class="fas fa-volume-up"></i></button>
+          <button id="rewindBack">-10sec</button>
+          <button id="rewindForward">+10sec</button>
+        </div>
+      </div>
     </div>
   </body>
   <script src="main.js"></script>
+  <script
+    src="https://kit.fontawesome.com/2e3dea039e.js"
+    crossorigin="anonymous"
+  ></script>
 </html>
-
-
-<!-- &#9658; play
-
-&#9612;   X2 ->> pause -->

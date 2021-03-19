@@ -1,6 +1,33 @@
-.hidePin{
-    display:none
+.video-container {
+  font-size: 0;
+  user-select: none;
 }
-.active{
-    display: inline;
+#cartoon {
+  width: 100%;
+  max-height: 85vh;
+  cursor: pointer;
+}
+#progress {
+  font-size: 50px;
+  width: 100%;
+  cursor: pointer;
+}
+.controlPanel-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fa-play {
+  color: rgb(49, 200, 49);
+}
+.fa-stop {
+  color: rgb(255, 43, 43);
+}
+.fa-pause {
+  color: rgb(122, 121, 121);
+}
+button,
+input {
+  font-size: 30px;
+  cursor: pointer;
 }

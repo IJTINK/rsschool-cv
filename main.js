@@ -11,97 +11,64 @@ let rewindForwardButton = document.getElementById("rewindForward");
 let rewindBackButton = document.getElementById("rewindBack");
 
 let playVideo = () => {
-      if (cartoon.classList.contains("watching") ) {
+    if (cartoon.classList.contains("watching") ) {
         cartoon.classList.remove("watching");
-        playButton.innerHTML = "Play";
+        addPlayClass();
         cartoon.pause();
     }
     else{
         cartoon.classList.add("watching");
-        playButton.innerHTML = "Pause";
         cartoon.play();
-    }
-   
-}
-
+        addPauseClass();
+    };
+};
 let stopVideo = () => {
     cartoon.pause();
     cartoon.currentTime = 0;
-    playButton.innerHTML = "Play";
+    addPlayClass();
     cartoon.classList.remove("watching");
-
+};
+let addPlayClass = () =>{
+    playButton.querySelector('.fas').classList.add("fa-play");
+    playButton.querySelector('.fas').classList.remove("fa-pause");
 }
-let speedDownPlay = () => {
-    cartoon.play();
-    cartoon.playbackRate = 0.5;
-    playButton.innerHTML = "Pause";
-    cartoon.classList.add("watching");
-}
-let normalSpeedPlay = () => {
-    cartoon.play();
-    cartoon.playbackRate = 1;
-    playButton.innerHTML = "Pause";
-    cartoon.classList.add("watching");
-}
-let speedUpPlay = () => {
-    cartoon.play();
-    cartoon.playbackRate = 2;
-    playButton.innerHTML = "Pause";
-    cartoon.classList.add("watching");
-}
-
-let rewindForward= () => {
-    cartoon.currentTime = cartoon.currentTime + 10;
-}
-
-let rewindBack = () => {
-    cartoon.currentTime = cartoon.currentTime - 10;
-}
-
-let clickOnVideo = () => {
-    if(cartoon.classList.contains("watching")){
-        cartoon.classList.remove("watching")
-        cartoon.pause();
-        playButton.innerHTML = "Play";
-
-    }
-    else{
-        cartoon.classList.add("watching")
-        cartoon.play();
-        playButton.innerHTML = "Pause";
-    }
-}
-
+let addPauseClass = () =>{
+    playButton.querySelector('.fas').classList.add("fa-pause");
+    playButton.querySelector('.fas').classList.remove("fa-play");
+};
 let clickOnPinOfVolume = () => {
     if(volumeOn.classList.contains("active")){
         volumeOn.classList.remove("active")
         cartoon.volume = 0;
-        volumeOn.innerHTML = "🔇";
+        volumeOn.querySelector('.fas').classList.remove("fa-volume-up");
+        volumeOn.querySelector('.fas').classList.add("fa-volume-mute");
     }
     else{
         volumeOn.classList.add("active")
         cartoon.volume = volumeRange.value / 100;
-        volumeOn.innerHTML = "🔊"
-    }
-    }
-
+        volumeOn.querySelector('.fas').classList.remove("fa-volume-mute");
+        volumeOn.querySelector('.fas').classList.add("fa-volume-up");
+    };
+};
+let changeSpeedOfCartoon = (speedOfCartoon) => {
+    cartoon.play();
+    cartoon.playbackRate = speedOfCartoon;
+    addPauseClass();
+    cartoon.classList.add("watching");
+}
+let rewindOfCartoon= (timeOfRewind) => {
+    cartoon.currentTime = cartoon.currentTime + timeOfRewind;
+};
 
 playButton.addEventListener("click", playVideo);
-cartoon.addEventListener("click", clickOnVideo);
+cartoon.addEventListener("click", playVideo);
 stopButton.addEventListener("click", stopVideo);
-speedDownButton.addEventListener("click", speedDownPlay);
-normalSpeedButton.addEventListener("click", normalSpeedPlay);
-speedUpButton.addEventListener("click", speedUpPlay);
 volumeOn.addEventListener('click', clickOnPinOfVolume);
 volumeRange.addEventListener("change", function() {
     cartoon.volume = this.value / 100;
   });
-rewindForwardButton.addEventListener("click", rewindForward);
-rewindBackButton.addEventListener("click", rewindBack);
-
-
-
-
-
-
-
+speedDownButton.addEventListener( "click", () => changeSpeedOfCartoon(0.5) );
+normalSpeedButton.addEventListener( "click", () => changeSpeedOfCartoon(1) );
+speedUpButton.addEventListener( "click", () => changeSpeedOfCartoon(2) );
+rewindForwardButton.addEventListener("click", () => rewindOfCartoon(10));
+rewindBackButton.addEventListener("click", () => rewindOfCartoon(-10));
