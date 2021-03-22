@@ -9,17 +9,57 @@ let cartoon = document.getElementById("cartoon");
 let volumeOn = document.getElementById("volumeOn");
 let rewindForwardButton = document.getElementById("rewindForward");
 let rewindBackButton = document.getElementById("rewindBack");
+let progressScale = document.getElementById("progress");
+let isClicked = false;
+
+let clickOnProgressScale = (e) => {
+    let progressScaleSize = progressScale.offsetWidth;
+    let progressScalePosX = progressScale.offsetLeft;
+    let mousePosX = e.clientX - progressScalePosX;
+    if (mousePosX < 0) {
+        mousePosX = 0;
+    }
+    else if (mousePosX > progressScaleSize){
+        mousePosX = progressScaleSize;
+    }
+    let onePxPercent = 100 / progressScaleSize;
+    let percent = onePxPercent * mousePosX;
+    progressScale.value = percent;
+    cartoon.currentTime = cartoon.duration / 100 * percent;
+}
+progressScale.addEventListener("mousedown", (e) => {
+    clickOnProgressScale(e);
+    isClicked = true;
+});
+document.addEventListener("mousemove", (e) => {
+    if (isClicked) {
+        clickOnProgressScale(e);
+    }
+});
+document.addEventListener("mouseup", (e) => {
+    isClicked = false;
+});
+
+let videoInterval;
 
 let playVideo = () => {
     if (cartoon.classList.contains("watching") ) {
         cartoon.classList.remove("watching");
         addPlayClass();
         cartoon.pause();
+
+        clearInterval(videoInterval);
     }
     else{
         cartoon.classList.add("watching");
         cartoon.play();
         addPauseClass();
+        
+        videoInterval = setInterval(() => {
+            maxValue = cartoon.duration;
+            let oneSecondPercent = 100 / maxValue;
+            progressScale.value = cartoon.currentTime * oneSecondPercent;
+        },1)
     };
 };
 let stopVideo = () => {
@@ -27,6 +67,7 @@ let stopVideo = () => {
     cartoon.currentTime = 0;
     addPlayClass();
     cartoon.classList.remove("watching");
+    progressScale.value = 0;
 };
 let addPlayClass = () =>{
     playButton.querySelector('.fas').classList.add("fa-play");
